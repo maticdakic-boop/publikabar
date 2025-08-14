@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Experience the ultimate nightlife at 54 Dreamy Nights, the top nightclub in Corfu. Dance all night with world-class DJs, themed events and a vibrant party crowd. Book your table now!" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="54 Dreamy Nights | Nightclub | Corfu" />
+  
+  <!-- One-time cache bust - remove after users get the update -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+  <title>PublikaBar</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="theme-color" content="#000000" />
+  
+  <link rel="preload" href="images/logo.jpeg" as="image">
+  <link rel="preload" href="images/party1.jpg" as="image">
+  <link rel="preload" href="fonts.css" as="style">
+  
+  <link rel="stylesheet" href="fonts.css?v=1.1" />
+  <link rel="stylesheet" href="styles.css?v=1.1" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'" defer/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" media="print" onload="this.media='all'" defer/>
+  
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.css" />
+  </noscript>
+</head>
+
+<body style="background-color: #000; margin: 0; padding: 0;">
+  <div class="page-loading" id="page-loading">
+    <img src="images/loadinglogo.png" alt="Publika Logo" class="loading-logo">
+    <!-- <div class="loading-text">Loading 54 Dreamy Nights</div> -->
+    <div class="loading-dots"></div>
+  </div>
+
+  <video class="background-video" 
+         loop 
+         muted 
+         playsinline 
+         webkit-playsinline 
+         autoplay
+         preload="auto" 
+         style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; object-fit: cover; z-index: -998;"
+         data-keepplaying="true">
+    <!-- MP4 first for better iOS compatibility -->
+    <source src="images/promovideo.mp4" type="video/mp4">
+    <source src="images/promovideo.mp4" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+  
+  <div class="background-fallback" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/party1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -999;
+    opacity: 0;
+  "></div>
+
+  <section class="sticky-logo-container">
+    <div class="logo-container">
+      <img
+        src="images/logo.jpeg"
+        alt="54 Dreamy Nights logo"
+        class="club-54-logo"
+        loading="eager"
+      />
+    </div>
+    <div id="scroll-indicator">
+      <span class="arrow"></span>
+      <span class="arrow"></span>
+      <span class="arrow"></span>
+    </div>
+  </section>
+
+  <section class="pinned-hero">
+    <div class="hero-main-content" data-aos="fade-up">
+      <h2 class="hero-title">Publika Bar Publika Klub Publika Festival Publika za Publiko</h2>
+      <p>
+        Publika Bar Klub je bar in klubsko prizorišče, ki se nahaja v sklopu kompleksa Mladinskega gledališča v Ljubljani.
+      </p>
+      <br>
+      <div class="reservation-button">
+        <a href="#" id="reservation-button">Karte</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="section fade-in-section">
+    <div class="events-stars-bg">
+      <span class="star" data-size="1" data-x="10" data-y="15"></span>
+      <span class="star" data-size="1.5" data-x="30" data-y="40"></span>
+      <span class="star" data-size="0.8" data-x="60" data-y="25"></span>
+      <span class="star" data-size="1.2" data-x="80" data-y="60"></span>
+      <span class="star" data-size="1.8" data-x="20" data-y="70"></span>
+      <span class="star" data-size="1" data-x="50" data-y="10"></span>
+      <span class="star" data-size="1.4" data-x="70" data-y="50"></span>
+      <span class="star" data-size="0.9" data-x="90" data-y="30"></span>
+      <span class="star" data-size="1.6" data-x="40" data-y="80"></span>
+      <span class="star" data-size="1.1" data-x="60" data-y="70"></span>
+      <span class="star" data-size="1.3" data-x="85" data-y="15"></span>
+    </div>
+
+    <div class="section-content">
+      <h2>Dogodki</h2>
+      <p>Prihajajoči dogodki v PublikaBaru</p>
+
+      <div class="events-scroller-wrapper">
+        <button id="events-prev" class="events-nav-btn prev" aria-label="Previous Event">&#10094;</button>
+        <div class="events-scroller">
+
+          <!--<div class="event-card">
+            <video id="event-card-1" class="event-media" loop muted playsinline preload="metadata">
+              <source src="weeks events/54_-_S25_01Mon_03.png" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button class="unmute-button" data-video="event-card-1">Unmute</button>
+            <div class="event-info">
+              <span class="event-date">Coming soon</span>
+              <span class="event-name">RIA ELLHNIDOU</span>
+            </div>
+          </div>-->
+
+          <div class="event-card">
+            <img class="event-media" src="images/dogodek1.jpeg" alt="" />
+            <div class="event-info">
+              <span class="event-date">Monday, August 11</span>
+            </div>
+          </div>
+          
+          <div class="event-card">
+            <img class="event-media" src="images/dogodek2.jpeg" alt="" />
+            <div class="event-info">
+              <span class="event-date">Tuesday, August 12</span>
+              
+            </div>
+          </div>
+
+          <div class="event-card">
+            <img class="event-media" src="images/dogodek3.jpeg" alt="" />
+            <div class="event-info">
+                <span class="event-date">Wednesday, August 13</span>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <img class="event-media" src="images/dogodek4.jpeg" alt="" />
+            <div class="event-info">
+              <span class="event-date">Thursday, August 14</span>
+            </div>
+          </div>
+
+          <div class="event-card">
+            <img class="event-media" src="images/dogodek5.jpeg" alt="" />
+            <div class="event-info">
+              <span class="event-date">Friday, August 15</span>
+            </div>
+          </div>
+
+          
+          
+
+        </div>
+        <button id="events-next" class="events-nav-btn next" aria-label="Next Event">&#10095;</button>
+      </div>
+      
+
+    </div>
+  </section>
+
+  <section id="location" class="section fade-in-section">
+    <div class="section-content-map">
+      <h2>Lokacija</h2>
+      <p>Najdete nas tukaj:</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.5016634521517!2d14.507107376426992!3d46.06103737108991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765336e30b7a1dd%3A0x87e3ea924f940ce!2sPublika%20Bar%20Klub!5e0!3m2!1ssl!2ssi!4v1755112297606!5m2!1ssl!2ssi"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section fade-in-section">
+    <div class="gallery-diamond gallery-diamond-1"></div>
+    <div class="gallery-diamond gallery-diamond-2"></div>
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <img src="images/dogodek4.jpeg" alt="Packed dance floor">
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/dogodek1.jpeg" alt="DJ spinning tracks">
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/dogodek5.jpeg" alt="Crowd cheering with hands up">
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/loadinglogo.png" alt="Laser light show">
+      </figure>
+    </div>
+
+    <div class="section-content">
+      <br>
+      <h2>Slike</h2>
+      <p>
+        Slike dogodkov PublikeBara
+      </p>
+      <br>
+      <div class="custom-view-more-container">
+        <a href="gallery.html" class="custom-view-more-btn">
+          <span class="btn-text">POGLEJ VEČ</span>
+          <span class="btn-icon">▶</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer-info" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Naslov</h3>
+        <p>
+          Vilharjeva cesta 11,<br>
+           1000 Ljubljana
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Kontakt</h3>
+        <p>+30 694 0645436</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Socialna Omrežja</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/54dreamynights/" class="social-circle" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/54dreamynights/" class="social-circle" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@54club" class="social-circle" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <footer>
+    <div class="footer-rights">
+      &copy; 2025 PublikaBar All rights reserved. | Designed by cona20
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const pageLoading = document.getElementById('page-loading');
+      const backgroundVideo = document.querySelector('.background-video');
+      const backgroundFallback = document.querySelector('.background-fallback');
+      
+      let videoLoaded = false;
+      let userInteracted = false;
+      let videoStarted = false;
+
+      // Check if we're coming from another page (like gallery)
+      const isNavigatingBack = document.referrer && document.referrer.includes(window.location.origin);
+      
+      function hideLoadingScreen() {
+        if (pageLoading) {
+          pageLoading.classList.add('hidden');
+          setTimeout(() => {
+            if (pageLoading) pageLoading.remove();
+          }, 500);
+        }
+      }
+
+      function showFallback() {
+        console.log('Showing fallback background');
+        if (backgroundFallback) {
+          backgroundFallback.style.opacity = '1';
+        }
+        hideLoadingScreen();
+      }
+
+      function playVideo() {
+        if (!videoLoaded || !backgroundVideo) return;
+        
+        const playPromise = backgroundVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            console.log('Video playing successfully');
+            videoStarted = true;
+            backgroundVideo.style.display = 'block';
+            hideLoadingScreen();
+          }).catch(error => {
+            console.log('Autoplay was prevented, keeping interaction listeners active:', error);
+            // Don't show fallback immediately, keep user interaction listeners active
+            // Show fallback image temporarily while waiting for interaction
+            showFallback();
+          });
+        } else {
+          // Older browsers without Promise-based play()
+          try {
+            backgroundVideo.play();
+            console.log('Video playing successfully (legacy)');
+            videoStarted = true;
+            backgroundVideo.style.display = 'block';
+            hideLoadingScreen();
+          } catch (error) {
+            console.log('Play failed, keeping interaction listeners active:', error);
+            showFallback();
+          }
+        }
+      }
+      
+      // Handle video loop issues on mobile
+      backgroundVideo.addEventListener('ended', () => {
+        console.log('Video ended, restarting...');
+        backgroundVideo.currentTime = 0;
+        backgroundVideo.play().catch(e => console.log('Loop restart failed:', e));
+      });
+      
+      // Ensure video keeps playing when page becomes visible again
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden && videoStarted && backgroundVideo.paused) {
+          console.log('Page visible again, resuming video...');
+          backgroundVideo.play().catch(e => console.log('Resume failed:', e));
+        }
+      });
+      
+      // iOS specific: keep video playing
+      window.addEventListener('pageshow', (event) => {
+        if (event.persisted && videoStarted && backgroundVideo.paused) {
+          console.log('Page shown from cache, resuming video...');
+          backgroundVideo.play().catch(e => console.log('Pageshow resume failed:', e));
+        }
+      });
+
+      // Set video sources immediately
+      const sources = backgroundVideo.querySelectorAll('source');
+      sources.forEach(source => {
+        if (source.dataset.src) {
+          source.src = source.dataset.src;
+        }
+      });
+      
+      // If navigating back, be more aggressive about starting video
+      if (isNavigatingBack) {
+        console.log('Navigating back from another page, quick start mode');
+        backgroundVideo.load();
+        // Try to play immediately without waiting for events
+        setTimeout(() => {
+          if (!videoStarted) {
+            playVideo();
+          }
+        }, 100);
+      }
+
+      // iOS-specific handling
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      
+      if (isIOS) {
+        // For iOS, we need to be more aggressive about loading
+        backgroundVideo.preload = 'auto';
+        backgroundVideo.load();
+        
+        // Add comprehensive user interaction listeners for iOS
+        const enableVideoOnInteraction = () => {
+          userInteracted = true;
+          console.log('User interaction detected on iOS');
+          if (videoLoaded && backgroundVideo.paused) {
+            // Try to play video and hide fallback if successful
+            const playPromise = backgroundVideo.play();
+            if (playPromise !== undefined) {
+              playPromise.then(() => {
+                console.log('Video playing after user interaction');
+                videoStarted = true;
+                backgroundVideo.style.display = 'block';
+                if (backgroundFallback) {
+                  backgroundFallback.style.opacity = '0';
+                }
+                hideLoadingScreen();
+              }).catch(error => {
+                console.log('Still failed after user interaction:', error);
+              });
+            }
+          }
+          // Don't remove listeners immediately - keep trying until video plays
+        };
+        
+        // Remove listeners only when video actually starts playing
+        backgroundVideo.addEventListener('playing', () => {
+          document.removeEventListener('touchstart', enableVideoOnInteraction);
+          document.removeEventListener('touchmove', enableVideoOnInteraction);
+          document.removeEventListener('touchend', enableVideoOnInteraction);
+          document.removeEventListener('click', enableVideoOnInteraction);
+          document.removeEventListener('scroll', enableVideoOnInteraction);
+          window.removeEventListener('scroll', enableVideoOnInteraction);
+        }, { once: true });
+        
+        // Listen for multiple types of user interactions
+        document.addEventListener('touchstart', enableVideoOnInteraction, { passive: true });
+        document.addEventListener('touchmove', enableVideoOnInteraction, { passive: true });
+        document.addEventListener('touchend', enableVideoOnInteraction, { passive: true });
+        document.addEventListener('click', enableVideoOnInteraction);
+        document.addEventListener('scroll', enableVideoOnInteraction, { passive: true });
+        window.addEventListener('scroll', enableVideoOnInteraction, { passive: true });
+      }
+
+      // Video event listeners
+      backgroundVideo.addEventListener('loadeddata', () => {
+        videoLoaded = true;
+        console.log('Video data loaded');
+        
+        // Always try to play immediately on all devices
+        playVideo();
+        
+        // Mark video as ready for quick navigation
+        backgroundVideo.setAttribute('data-loaded', 'true');
+      }, { once: true });
+
+      backgroundVideo.addEventListener('canplay', () => {
+        console.log('Video can play');
+        playVideo();
+      }, { once: true });
+
+      backgroundVideo.addEventListener('playing', () => {
+        console.log('Video is playing');
+        backgroundVideo.style.display = 'block';
+        // Hide fallback background when video starts playing
+        if (backgroundFallback) {
+          backgroundFallback.style.opacity = '0';
+        }
+        hideLoadingScreen();
+      }, { once: true });
+
+      backgroundVideo.addEventListener('error', (e) => {
+        console.error('Background video failed to load:', e);
+        showFallback();
+      });
+
+      // Load the video
+      backgroundVideo.load();
+      
+      // Safety timeout - show fallback if video hasn't loaded
+      // Shorter timeout when navigating back
+      const timeoutDuration = isNavigatingBack ? 2000 : 5000;
+      setTimeout(() => {
+        if (pageLoading && !pageLoading.classList.contains('hidden')) {
+          console.log('Timeout reached, showing fallback');
+          showFallback();
+        }
+      }, timeoutDuration);
+    });
+
+    const sections = document.querySelectorAll('.fade-in-section');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@3.0.0-beta.6/dist/aos.js" defer></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            once: false,
+            duration: 600,
+            easing: 'ease-in-out'
+          });
+        }
+      });
+    </script>
+
+  <script>
+    (function() {
+      const indicator = document.getElementById('scroll-indicator');
+      const heroSection = document.querySelector('.pinned-hero');
+      
+      if (!indicator || !heroSection) return;
+
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            indicator.classList.add('hidden');
+            heroObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.3
+      });
+
+      heroObserver.observe(heroSection);
+    })();
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const btn = document.getElementById('reservation-button');
+      const footer = document.getElementById('footer-info');
+
+      if (!btn || !footer) return;
+
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const isPhone = /Mobi|Android|iPhone|iPad|iPod|Windows Phone/.test(navigator.userAgent);
+
+        if (isPhone) {
+          window.location.href = 'tel:+306940645436';
+        } else {
+          footer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Events navigation functionality
+      const eventsScroller = document.querySelector('.events-scroller');
+      const prevBtn = document.getElementById('events-prev');
+      const nextBtn = document.getElementById('events-next');
+
+      if (eventsScroller && prevBtn && nextBtn) {
+        let isScrolling;
+        
+        const scroll = (direction) => {
+          const cards = Array.from(eventsScroller.children);
+          const scrollLeft = eventsScroller.scrollLeft;
+          const scrollerCenter = scrollLeft + eventsScroller.clientWidth / 2;
+
+          let currentCardIndex = cards.findIndex(card => {
+            const cardLeft = card.offsetLeft;
+            const cardRight = cardLeft + card.offsetWidth;
+            return scrollerCenter >= cardLeft && scrollerCenter <= cardRight;
+          });
+
+          if (currentCardIndex === -1) {
+             currentCardIndex = (scrollLeft > cards[cards.length - 1].offsetLeft) ? cards.length -1 : 0;
+          }
+
+          const targetIndex = Math.max(0, Math.min(cards.length - 1, currentCardIndex + direction));
+          
+          if(cards[targetIndex]) {
+            eventsScroller.scrollTo({
+              left: cards[targetIndex].offsetLeft - (eventsScroller.clientWidth - cards[targetIndex].clientWidth) / 2,
+              behavior: 'smooth'
+            });
+          }
+        };
+
+        prevBtn.addEventListener('click', () => scroll(-1));
+        nextBtn.addEventListener('click', () => scroll(1));
+
+        // Hide/show buttons based on scroll position
+        function updateNavigationButtons() {
+            if (isScrolling) {
+                clearTimeout(isScrolling);
+            }
+            isScrolling = setTimeout(() => {
+                const scrollLeft = Math.round(eventsScroller.scrollLeft);
+                const scrollWidth = eventsScroller.scrollWidth;
+                const clientWidth = eventsScroller.clientWidth;
+                
+                prevBtn.style.opacity = scrollLeft <= 0 ? '0.5' : '1';
+                nextBtn.style.opacity = scrollLeft >= scrollWidth - clientWidth - 1 ? '0.5' : '1';
+            }, 66);
+        }
+
+        eventsScroller.addEventListener('scroll', updateNavigationButtons);
+        
+        // Use a ResizeObserver to update on orientation change or resize
+        const resizeObserver = new ResizeObserver(() => {
+            updateNavigationButtons();
+            scrollToCurrentDayEvent(false); // don't use smooth scroll on resize
+        });
+        resizeObserver.observe(eventsScroller);
+
+        // Auto-scroll to current day's event
+        scrollToCurrentDayEvent();
+      }
+
+      // Function to scroll to current day's event
+      function scrollToCurrentDayEvent(useSmoothScroll = true) {
+        const eventCards = document.querySelectorAll('.event-card');
+        const eventsScroller = document.querySelector('.events-scroller');
+        
+        if (!eventsScroller) return;
+
+        let targetCard = null;
+        const now = new Date();
+        
+        // Apply 3AM rule - if it's before 3AM, consider it still the previous day
+        if (now.getHours() < 3) {
+          now.setDate(now.getDate() - 1);
+        }
+        
+        const todayDayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+
+        eventCards.forEach((card) => {
+          const dateSpan = card.querySelector('.event-date');
+          if (dateSpan) {
+            if (!dateSpan.getAttribute('data-original-text')) {
+              dateSpan.setAttribute('data-original-text', dateSpan.textContent.trim());
+            }
+            
+            const originalText = dateSpan.getAttribute('data-original-text');
+            
+            // Check if this event card's day matches today
+            if (originalText.toLowerCase().includes(todayDayName.toLowerCase())) {
+              targetCard = card;
+              dateSpan.textContent = 'TODAY';
+            } else {
+              dateSpan.textContent = originalText;
+            }
+          }
+        });
+
+        // Scroll to the current day's card
+        if (targetCard) {
+            const targetLeft = targetCard.offsetLeft;
+            const scrollerWidth = eventsScroller.clientWidth;
+            const cardWidth = targetCard.clientWidth;
+
+            eventsScroller.scrollTo({
+                left: targetLeft - (scrollerWidth - cardWidth) / 2,
+                behavior: useSmoothScroll ? 'smooth' : 'auto'
+            });
+        }
+      }
+    });
+  </script>
+
+  <script src="events.js?v=3.2" defer></script>
+</body>
+</html>
+  
